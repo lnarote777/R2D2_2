@@ -4,14 +4,18 @@ fun main(args: Array<String>) {
     r2d2Pos = moveRobot(10, 5, -2)
     println("x: ${r2d2Pos[0]}; y: ${r2d2Pos[1]}; dir: ${orientacion(r2d2Pos[2])}")
 
-    r2d2Pos = moveRobot(10, 5, -2)
+    r2d2Pos = moveRobot(0, 0, 0)
     println("x: ${r2d2Pos[0]}; y: ${r2d2Pos[1]}; dir: ${orientacion(r2d2Pos[2])}")
 
-    r2d2Pos = moveRobot(10, 5, -2)
+    r2d2Pos = moveRobot()
     println("x: ${r2d2Pos[0]}; y: ${r2d2Pos[1]}; dir: ${orientacion(r2d2Pos[2])}")
 
-    r2d2Pos = moveRobot(10, 5, -2)
+    r2d2Pos = moveRobot(-10, -5, 2)
     println("x: ${r2d2Pos[0]}; y: ${r2d2Pos[1]}; dir: ${orientacion(r2d2Pos[2])}")
+
+    r2d2Pos = moveRobot(-10, -5, 2)
+    println("x: ${r2d2Pos[0]}; y: ${r2d2Pos[1]}; dir: ${orientacion(r2d2Pos[2])}")
+
 }
 
 /**
@@ -39,7 +43,7 @@ fun moveRobot(vararg movs: Int): List<Int>{
     return listOf(posX, posY, dir)
 }
 
-fun orientacion(dir: Int){
+fun orientacion(dir: Int): String {
     var direc = ""
     when(dir){
         0 -> direc = "POSITIVEY"
