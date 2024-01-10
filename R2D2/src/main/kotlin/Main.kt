@@ -55,3 +55,6 @@ fun orientacion(dir: Int): String {
 
     return direc
 }
+
+
+
