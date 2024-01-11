@@ -45,12 +45,12 @@ fun moveRobot(vararg movs: Int): List<Int>{
 
 fun orientacion(dir: Int): String {
     var direc = ""
-    when(dir){
-        0 -> direc = "POSITIVEY"
-        1 -> direc = "NEGATIVEX"
-        2 -> direc = "NEGATIVEY"
-        3 -> direc = "POSITIVEX"
-        else -> direc = ""
+    direc = when(dir){
+        0 -> "POSITIVEY"
+        1 -> "NEGATIVEX"
+        2 -> "NEGATIVEY"
+        3 -> "POSITIVEX"
+        else -> ""
     }
 
     return direc
